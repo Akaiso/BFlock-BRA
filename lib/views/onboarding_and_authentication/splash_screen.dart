@@ -1,0 +1,39 @@
+import 'package:bra/components/colors.dart';
+import 'package:bra/views/onboarding_and_authentication/welcome_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import 'introduction_screens.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
+    });
+  }
+
+//SvgPicture.asset('assets/logo.svg')
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: brandYellow,
+        body: Center(
+          child: Image(image: AssetImage('assets/bf_logo_2.png'),),
+        ),
+      ),
+    );
+  }
+}
