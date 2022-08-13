@@ -104,4 +104,30 @@ googleButton(onTap, text, textColor, bottonColor) {
 
 }
 
+modalExtendedButton(onTap, text, textColor, bottonColor) {
+  return InkWell(
+    onTap: onTap,
+    child: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
+          color: bottonColor,
+        ),
+       // width: Get.width / 2,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Center(
+            child: Text(
+              text,
+              style: GoogleFonts.livvic(
+                  color: textColor,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16
+              ),
+            ),
+          ),
+        )
+    ),
+  );
+
+}
+
 

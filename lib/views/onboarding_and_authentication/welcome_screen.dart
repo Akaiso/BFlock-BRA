@@ -16,23 +16,31 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.push((context),
-          MaterialPageRoute(builder: (context) => IntroductionScreen1()));
+          MaterialPageRoute(builder: (context) => const IntroductionScreen1()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-          backgroundColor: brandYellow,
-          body: Center(
-            child: Text(
-              'Welcome',
-              style: GoogleFonts.livvic(color: Colors.white, fontSize: 50,fontWeight: FontWeight.w500),
-            ),
-          )),
+      child: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Scaffold(
+            backgroundColor: brandYellow,
+            body: Center(
+              child: Text(
+                'Welcome',
+                style: GoogleFonts.livvic(
+                    color: Colors.white,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w500),
+              ),
+            )),
+      ),
     );
   }
 }
