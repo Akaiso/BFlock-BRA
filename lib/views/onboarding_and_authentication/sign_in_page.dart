@@ -36,8 +36,8 @@ class SignUpPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            vh40,
-                            vh20,
+                            vh50,
+                            vh50,
                             Expanded(
                               flex: 1,
                               child: Text(
@@ -100,7 +100,7 @@ class SignUpPage extends StatelessWidget {
                             ),
                             vh30,
                             extendedButton(() {
-                              Get.to(const ConfirmationCode());
+                              (){};
                             }, 'Sign in', darkGrey, brandYellow),
                           ],
                         ),
