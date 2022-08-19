@@ -1,4 +1,3 @@
-import 'package:bra/components/colors.dart';
 import 'package:bra/components/sized_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

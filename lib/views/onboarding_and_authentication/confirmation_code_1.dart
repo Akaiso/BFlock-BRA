@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../components/modal.dart';
+
 class ConfirmationCode extends StatelessWidget {
   const ConfirmationCode({Key? key}) : super(key: key);
 
@@ -195,47 +197,7 @@ class ConfirmationCode extends StatelessWidget {
                         showDialog(
                           context: context,
                           builder: (BuildContext context) {
-                            return Center(
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                height: 315,
-                                width: 300,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    vh50,
-                                    const Image(
-                                      image: AssetImage("assets/Success.png"),
-                                      width: 80,
-                                      height: 80,
-                                    ),
-                                    vh20,
-                                    DefaultTextStyle(
-                                      style: GoogleFonts.livvic(
-                                          color: darkPurple,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400), child: const Text('Your account created successfully'),
-                                    ),
-                                    vh20,
-                                    AlertDialog(
-                                        actionsAlignment:
-                                            MainAxisAlignment.center,
-                                        backgroundColor: Colors.transparent,
-                                        elevation: 0,
-                                        actions: [
-                                          modalExtendedButton(
-                                              () {Get.to(const SignUpPage());},
-                                              'Sign Up',
-                                              darkGrey,
-                                              brandYellow)
-                                        ])
-                                  ],
-                                ),
-                              ),
-                            );
+                            return signInModal();
                           },
                         );
                       },

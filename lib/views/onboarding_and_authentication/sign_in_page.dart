@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../components/buttons.dart';
 import '../../components/colors.dart';
+import '../../components/modal.dart';
 import '../../components/sized_box.dart';
-import 'confirmation_code_1.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +100,12 @@ class SignUpPage extends StatelessWidget {
                             ),
                             vh30,
                             extendedButton(() {
-                              (){};
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return loading();
+                                },
+                              );
                             }, 'Sign in', darkGrey, brandYellow),
                           ],
                         ),
@@ -112,6 +117,8 @@ class SignUpPage extends StatelessWidget {
                       child: Column(
                         children: [
                           InkWell(
+                            onTap:(){
+                            },
                             child: Text(
                               'Sign up',
                               style: GoogleFonts.livvic(
@@ -122,6 +129,7 @@ class SignUpPage extends StatelessWidget {
                           ),
                           vh10,
                           InkWell(
+                            onTap: (){},
                             child: Text(
                               'Forgot your password?',
                               style: GoogleFonts.livvic(
