@@ -1,6 +1,7 @@
 
 
 import 'package:bra/components/sized_box.dart';
+import 'package:bra/views/onboarding_and_authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -55,7 +56,7 @@ signInModal( ){
 }
 
 
-loading( ){
+loadingModal( ){
   return Center(
     child: Container(
       decoration: BoxDecoration(

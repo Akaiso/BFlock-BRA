@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 extendedButton(onTap, text, textColor, bottonColor) {
   return InkWell(
     onTap: onTap,
-    child: Container(
+    child: Container(height: 52,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
         color: bottonColor,
       ),
