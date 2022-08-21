@@ -1,4 +1,4 @@
-import 'package:bra/views/onboarding_and_authentication/first_timer_login/get_started3_3.dart';
+import 'package:bra/views/onboarding_and_authentication/first_timer_login/get_started3_4.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,16 +8,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../components/buttons.dart';
 import '../../../components/colors.dart';
 import '../../../components/sized_box.dart';
-import 'get_started3_1.dart';
 
-class GetStartedSecond extends StatelessWidget {
-  const GetStartedSecond({Key? key}) : super(key: key);
+class GetStartedThird extends StatelessWidget {
+  const GetStartedThird({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: WillPopScope(
         onWillPop: () async {
+
           return true;
         },
         child: GestureDetector(
@@ -35,7 +35,7 @@ class GetStartedSecond extends StatelessWidget {
                   vh70,
                   vh30,
                   Text(
-                    'Setup your bookshelf',
+                    'Add Book 2',
                     style: GoogleFonts.livvic(
                         fontWeight: FontWeight.w700,
                         fontSize: 22,
@@ -66,7 +66,7 @@ class GetStartedSecond extends StatelessWidget {
                                   fontSize: 18)),
                         ),
                         vh20,
-                        TextFormField(
+                        TextFormField(autofocus: false,
                           decoration: InputDecoration(
                               enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: lightPurple)),
@@ -118,8 +118,7 @@ class GetStartedSecond extends StatelessWidget {
                     ),
                   ),
                   extendedButton(() {
-                    Get.to(() => const GetStartedThird(),
-                        transition: Transition.rightToLeft,
+                    Get.to(() => const GetStartedFourth(),transition: Transition.rightToLeft,
                         curve: Curves.easeInOut,
                         duration: const Duration(milliseconds: 600));
                   }, 'Save & Continue', darkGrey, brandYellow)

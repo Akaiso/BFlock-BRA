@@ -15,200 +15,208 @@ class ConfirmationCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      backgroundColor: scaffoldBg,
-      body: CustomScrollView(
-        slivers: [
-          SliverList(
-            delegate: SliverChildListDelegate([
-              Container(
-                height: 188,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/headerBg1.png'),
-                        fit: BoxFit.cover)),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 20.0,
+        child: GestureDetector(
+      onTap: () {
+        FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: scaffoldBg,
+        body: CustomScrollView(
+          slivers: [
+            SliverList(
+              delegate: SliverChildListDelegate([
+                Container(
+                  height: 188,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/headerBg1.png'),
+                          fit: BoxFit.cover)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20.0,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        vh40,
+                        Expanded(
+                          flex: 1,
+                          child: InkWell(
+                            onTap: () {
+                              Get.back();
+                            },
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              size: 30,
+                              color: darkGrey,
+                            ),
+                          ),
+                        ),
+                        vh20,
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            'Enter 6-digit ',
+                            style: GoogleFonts.livvic(
+                                fontSize: 30, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            'Verification code ',
+                            style: GoogleFonts.livvic(
+                                fontSize: 30, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                vh50,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: Get.width / 15,
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      RichText(
+                        text: TextSpan(
+                            text:
+                                'the verification code was sent to the phone number  ',
+                            style: GoogleFonts.livvic(
+                                color: const Color(0xff6d6d6d), fontSize: 16),
+                            children: [
+                              TextSpan(
+                                  text: '+2348145678790',
+                                  style: GoogleFonts.livvic(color: darkGrey)),
+                              const TextSpan(text: ' please enter the code:'),
+                            ]),
+                      ),
                       vh40,
-                      Expanded(
-                        flex: 1,
-                        child: InkWell(
-                          onTap: () {
-                            Get.back();
-                          },
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            size: 30,
-                            color: darkGrey,
+                      Form(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                                width: 30,
+                                child: TextFormField(
+                                  style: Theme.of(context).textTheme.headline6,
+                                  textAlign: TextAlign.center,
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: [
+                                    LengthLimitingTextInputFormatter(1),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      vh20,
-                      Expanded(
-                        flex: 1,
+                      vh30,
+                      InkWell(
+                        onTap: () {},
                         child: Text(
-                          'Enter 6-digit ',
+                          'Resend verification code',
                           style: GoogleFonts.livvic(
-                              fontSize: 30, fontWeight: FontWeight.w600),
+                              color: darkPurple,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Verification code ',
-                          style: GoogleFonts.livvic(
-                              fontSize: 30, fontWeight: FontWeight.w600),
-                        ),
+                      vh40,
+                      FloatingActionButton(
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return signInModal();
+                            },
+                          );
+                        },
+                        child: Icon(Icons.adaptive.arrow_forward),
                       ),
                     ],
                   ),
-                ),
-              ),
-              vh50,
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: Get.width / 15,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                          text:
-                              'the verification code was sent to the phone number  ',
-                          style: GoogleFonts.livvic(
-                              color: const Color(0xff6d6d6d), fontSize: 16),
-                          children: [
-                            TextSpan(
-                                text: '+2348145678790',
-                                style: GoogleFonts.livvic(color: darkGrey)),
-                            const TextSpan(text: ' please enter the code:'),
-                          ]),
-                    ),
-                    vh40,
-                    Form(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                              width: 30,
-                              child: TextFormField(
-                                style: Theme.of(context).textTheme.headline6,
-                                textAlign: TextAlign.center,
-                                keyboardType: TextInputType.number,
-                                inputFormatters: [
-                                  LengthLimitingTextInputFormatter(1),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    vh30,
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Resend verification code',
-                        style: GoogleFonts.livvic(
-                            color: darkPurple,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    vh40,
-                    FloatingActionButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return signInModal();
-                          },
-                        );
-                      },
-                      child: Icon(Icons.adaptive.arrow_forward),
-                    ),
-                  ],
-                ),
-              )
-            ]),
-          ),
-        ],
+                )
+              ]),
+            ),
+          ],
+        ),
       ),
     ));
   }

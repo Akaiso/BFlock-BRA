@@ -110,7 +110,10 @@ class GetStartedFirst extends StatelessWidget {
               ),
               vh70,
               extendedButton(() {
-                Get.to(() => const GetStartedSecond());
+                Get.to(() => const GetStartedSecond(),
+                    transition: Transition.rightToLeft,
+                    curve: Curves.easeInOut,
+                    duration: const Duration(milliseconds: 600));
               }, 'Join Room', darkGrey, brandYellow)
             ],
           ),

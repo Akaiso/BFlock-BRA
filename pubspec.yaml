@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^1.0.3
   google_fonts: ^3.0.1
   smooth_page_indicator: ^1.0.0+2
+  dotted_border: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:
