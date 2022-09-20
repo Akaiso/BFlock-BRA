@@ -31,7 +31,7 @@ signInModal( ){
           vh20,
           DefaultTextStyle(
             style: GoogleFonts.livvic(
-                color: darkPurple,
+                color: kDarkPurple,
                 fontSize: 16,
                 fontWeight: FontWeight.w400), child: const Text('Your account created successfully'),
           ),
@@ -45,8 +45,8 @@ signInModal( ){
                 modalExtendedButton(
                         () {Get.to(const SignInPage());},
                     'Sign Up',
-                    darkGrey,
-                    brandYellow)
+                    kDarkGrey,
+                    kBrandYellow)
               ])
         ],
       ),
@@ -73,7 +73,7 @@ loadingModal( ){
           vh50,
           DefaultTextStyle(
             style: GoogleFonts.livvic(
-                color: darkPurple,
+                color: kDarkPurple,
                 fontSize: 16,
                 fontWeight: FontWeight.w400), child: const Text('Wait a few seconds ...'),
           ),

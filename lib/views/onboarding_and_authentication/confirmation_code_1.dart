@@ -23,7 +23,7 @@ class ConfirmationCode extends StatelessWidget {
         }
       },
       child: Scaffold(
-        backgroundColor: scaffoldBg,
+        backgroundColor: kScaffoldBg,
         body: CustomScrollView(
           slivers: [
             SliverList(
@@ -52,7 +52,7 @@ class ConfirmationCode extends StatelessWidget {
                             child: Icon(
                               Icons.arrow_back_ios,
                               size: 30,
-                              color: darkGrey,
+                              color: kDarkGrey,
                             ),
                           ),
                         ),
@@ -94,7 +94,7 @@ class ConfirmationCode extends StatelessWidget {
                             children: [
                               TextSpan(
                                   text: '+2348145678790',
-                                  style: GoogleFonts.livvic(color: darkGrey)),
+                                  style: GoogleFonts.livvic(color: kDarkGrey)),
                               const TextSpan(text: ' please enter the code:'),
                             ]),
                       ),
@@ -193,7 +193,7 @@ class ConfirmationCode extends StatelessWidget {
                         child: Text(
                           'Resend verification code',
                           style: GoogleFonts.livvic(
-                              color: darkPurple,
+                              color: kDarkPurple,
                               fontSize: 14,
                               fontWeight: FontWeight.w400),
                         ),

@@ -38,7 +38,7 @@ class GetStartedFourth extends StatelessWidget {
                     style: GoogleFonts.livvic(
                         fontWeight: FontWeight.w700,
                         fontSize: 22,
-                        color: darkGrey),
+                        color: kDarkGrey),
                   ),
                   vh30,
                   Text(
@@ -46,7 +46,7 @@ class GetStartedFourth extends StatelessWidget {
                     style: GoogleFonts.livvic(
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
-                        color: lightText),
+                        color: kLightText),
                     textAlign: TextAlign.center,
                   ),
                   vh30,
@@ -56,11 +56,11 @@ class GetStartedFourth extends StatelessWidget {
                         TextFormField(
                           decoration: InputDecoration(
                               enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: lightPurple)),
+                                  borderSide: BorderSide(color: kLightPurple)),
                               contentPadding: const EdgeInsets.only(top: 30),
                               hintText: 'Book Title',
                               hintStyle: GoogleFonts.livvic(
-                                  color: lightText,
+                                  color: kLightText,
                                   fontWeight: FontWeight.w400,
                                   fontSize: 18)),
                         ),
@@ -68,11 +68,11 @@ class GetStartedFourth extends StatelessWidget {
                         TextFormField(
                           decoration: InputDecoration(
                               enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: lightPurple)),
+                                  borderSide: BorderSide(color: kLightPurple)),
                               contentPadding: const EdgeInsets.only(top: 30),
                               hintText: 'Author\'s name',
                               hintStyle: GoogleFonts.livvic(
-                                  color: lightText,
+                                  color: kLightText,
                                   fontWeight: FontWeight.w400,
                                   fontSize: 18)),
                         ),
@@ -80,7 +80,7 @@ class GetStartedFourth extends StatelessWidget {
                         Text(
                           'Book Cover Image(png,jpg,jpeg)',
                           style: GoogleFonts.livvic(
-                              color: lightText,
+                              color: kLightText,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
                         ),
@@ -104,7 +104,7 @@ class GetStartedFourth extends StatelessWidget {
                                 Text(
                                   'Capture',
                                   style: GoogleFonts.livvic(
-                                      color: darkGrey,
+                                      color: kDarkGrey,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500),
                                 ),
@@ -117,10 +117,10 @@ class GetStartedFourth extends StatelessWidget {
                     ),
                   ),
                   extendedButton(() {
-                    Get.to(()=>const Home1(),transition: Transition.rightToLeft,
+                    Get.to(()=>const HomeFullView(),transition: Transition.rightToLeft,
                         curve: Curves.easeInOut,
                         duration: const Duration(milliseconds: 600));
-                  }, 'Finish', darkGrey, brandYellow)
+                  }, 'Finish', kDarkGrey, kBrandYellow)
                 ],
               ),
             ),

@@ -38,7 +38,7 @@ class _IntroductionScreen1State extends State<IntroductionScreen1> {
                 effect: WormEffect(
                   dotWidth: 8,
                   dotHeight: 8,
-                  activeDotColor: brandYellow,
+                  activeDotColor: kBrandYellow,
                 ),
               )),
           Container(
@@ -51,7 +51,7 @@ class _IntroductionScreen1State extends State<IntroductionScreen1> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: brandYellow,
+                  color: kBrandYellow,
                 ),
                 width: 300,
                 height: 50,

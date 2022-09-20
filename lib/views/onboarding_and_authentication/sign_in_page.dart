@@ -27,7 +27,7 @@ class SignInPage extends StatelessWidget {
           }
         },
         child: Scaffold(
-          backgroundColor: scaffoldBg,
+          backgroundColor: kScaffoldBg,
           body: CustomScrollView(
             slivers: [
               SliverList(
@@ -69,18 +69,18 @@ class SignInPage extends StatelessWidget {
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 hintText: 'Username',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 suffixIcon: Padding(
                                   padding: const EdgeInsets.only(top: 30),
@@ -95,7 +95,7 @@ class SignInPage extends StatelessWidget {
                                 ),
                                 hintText: 'Password',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
@@ -117,7 +117,7 @@ class SignInPage extends StatelessWidget {
                             await Future.delayed(const Duration(seconds: 3));
                             Get.back();
                             Get.to(() => const GetStartedFirst());
-                          }, 'Sign in', darkGrey, brandYellow),
+                          }, 'Sign in', kDarkGrey, kBrandYellow),
                         ],
                       ),
                     ),
@@ -133,7 +133,7 @@ class SignInPage extends StatelessWidget {
                             'Sign up',
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
-                                color: darkPurple,
+                                color: kDarkPurple,
                                 fontWeight: FontWeight.w400),
                           ),
                         ),
@@ -144,7 +144,7 @@ class SignInPage extends StatelessWidget {
                             'Forgot your password?',
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
-                                color: darkPurple,
+                                color: kDarkPurple,
                                 fontWeight: FontWeight.w400),
                           ),
                         ),
@@ -152,8 +152,8 @@ class SignInPage extends StatelessWidget {
                         facebookButton(() {}, 'Log in with facebook',
                             Colors.white, const Color(0xff4460a0)),
                         vh30,
-                        googleButton(() {}, 'Log in with Google', lightText,
-                            whiteButton),
+                        googleButton(() {}, 'Log in with Google', kLightText,
+                            kWhiteButton),
                         vh40
                       ],
                     ),

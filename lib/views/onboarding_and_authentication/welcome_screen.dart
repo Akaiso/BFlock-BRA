@@ -30,7 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           return false;
         },
         child: Scaffold(
-            backgroundColor: brandYellow,
+            backgroundColor: kBrandYellow,
             body: Center(
               child: Text(
                 'Welcome',

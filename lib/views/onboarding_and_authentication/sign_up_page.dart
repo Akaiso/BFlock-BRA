@@ -24,7 +24,7 @@ class SignUpPage extends StatelessWidget {
           }
         },
         child: Scaffold(
-          backgroundColor: scaffoldBg,
+          backgroundColor: kScaffoldBg,
           body: CustomScrollView(
             slivers: [
               SliverList(
@@ -49,7 +49,7 @@ class SignUpPage extends StatelessWidget {
                             child: Icon(
                               Icons.arrow_back_ios,
                               size: 30,
-                              color: darkGrey,
+                              color: kDarkGrey,
                             ),
                           ),
                           vh20,
@@ -73,40 +73,40 @@ class SignUpPage extends StatelessWidget {
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 hintText: 'Username',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 hintText: 'Email',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 hintText: 'Phone number',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 suffixIcon: Padding(
                                   padding: const EdgeInsets.only(top: 30),
@@ -121,14 +121,14 @@ class SignUpPage extends StatelessWidget {
                                 ),
                                 hintText: 'Password',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
                           TextFormField(
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: lightPurple)),
+                                    borderSide: BorderSide(color: kLightPurple)),
                                 contentPadding: const EdgeInsets.only(top: 30),
                                 suffixIcon: Padding(
                                   padding: const EdgeInsets.only(top: 20),
@@ -143,7 +143,7 @@ class SignUpPage extends StatelessWidget {
                                 ),
                                 hintText: 'Confirm password',
                                 hintStyle: GoogleFonts.livvic(
-                                    color: lightText,
+                                    color: kLightText,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 18)),
                           ),
@@ -157,28 +157,28 @@ class SignUpPage extends StatelessWidget {
                                 width: 13,
                                 decoration: BoxDecoration(
                                   border:
-                                      Border.all(color: lightPurple, width: 2),
+                                      Border.all(color: kLightPurple, width: 2),
                                 ),
                               ),
                               hh10,
                               Text(
                                 'I have read and agree to',
                                 style: GoogleFonts.livvic(
-                                    fontSize: 14, color: darkGrey),
+                                    fontSize: 14, color: kDarkGrey),
                               ),
                               InkWell(
                                   onTap: () {},
                                   child: Text(
                                     ' Term and Conditions',
                                     style: GoogleFonts.livvic(
-                                        fontSize: 14, color: brandYellow),
+                                        fontSize: 14, color: kBrandYellow),
                                   )),
                             ],
                           ),
                           vh30,
                           extendedButton(() {
                             Get.to(const ConfirmationCode());
-                          }, 'Sign up', darkGrey, brandYellow),
+                          }, 'Sign up', kDarkGrey, kBrandYellow),
                         ],
                       ),
                     ),
@@ -192,7 +192,7 @@ class SignUpPage extends StatelessWidget {
                           'Sign In',
                           style: GoogleFonts.livvic(
                               fontSize: 14,
-                              color: darkPurple,
+                              color: kDarkPurple,
                               fontWeight: FontWeight.w400),
                         ),
                         vh20,
@@ -202,17 +202,17 @@ class SignUpPage extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 30.0),
                               child: Divider(
-                                color: lightPurple,
+                                color: kLightPurple,
                                 height: 0.4,
                               ),
                             ),
                             Center(
                               child: Container(
-                                  color: scaffoldBg,
+                                  color: kScaffoldBg,
                                   child: Text(
                                     'OR',
                                     style: GoogleFonts.livvic(
-                                        color: darkPurple, fontSize: 12),
+                                        color: kDarkPurple, fontSize: 12),
                                   )),
                             )
                           ],
@@ -221,8 +221,8 @@ class SignUpPage extends StatelessWidget {
                         facebookButton(() {}, 'Log in with facebook',
                             Colors.white, const Color(0xff4460a0)),
                         vh30,
-                        googleButton(() {}, 'Log in with Google', lightText,
-                            whiteButton),
+                        googleButton(() {}, 'Log in with Google', kLightText,
+                            kWhiteButton),
                         vh40
                       ],
                     ),

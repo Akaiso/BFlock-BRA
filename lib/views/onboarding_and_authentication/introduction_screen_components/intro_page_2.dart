@@ -32,7 +32,7 @@ introPage2(){
           width: 290,
           child: Text(
             'All in your pocket, access anytime, anywhere, anydevice',
-            style: GoogleFonts.livvic(fontSize: 18, color: grey1),
+            style: GoogleFonts.livvic(fontSize: 18, color: kGrey1),
             textAlign: TextAlign.center,
           )),
     ],

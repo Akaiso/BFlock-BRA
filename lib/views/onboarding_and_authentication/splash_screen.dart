@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
           return false;
         },
         child: Scaffold(
-          backgroundColor: brandYellow,
+          backgroundColor: kBrandYellow,
           body: const Center(
             child: Image(
               image: AssetImage('assets/bf_logo_2.png'),

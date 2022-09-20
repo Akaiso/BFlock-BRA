@@ -30,7 +30,7 @@ class GetStartedFirst extends StatelessWidget {
               Text(
                 'Explore a range of rooms',
                 style: GoogleFonts.livvic(
-                    fontWeight: FontWeight.w700, fontSize: 22, color: darkGrey),
+                    fontWeight: FontWeight.w700, fontSize: 22, color: kDarkGrey),
               ),
               vh30,
               Text(
@@ -38,7 +38,7 @@ class GetStartedFirst extends StatelessWidget {
                 style: GoogleFonts.livvic(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
-                    color: lightText),
+                    color: kLightText),
                 textAlign: TextAlign.center,
               ),
               vh70,
@@ -72,12 +72,12 @@ class GetStartedFirst extends StatelessWidget {
                                   1
                                 ],
                                 colors: [
-                                  brandYellow,
-                                  brandYellow.withOpacity(0.8),
-                                  brandYellow.withOpacity(0.6),
-                                  brandYellow.withOpacity(0.4),
-                                  brandYellow.withOpacity(0.2),
-                                  brandYellow.withOpacity(0.1)
+                                  kBrandYellow,
+                                  kBrandYellow.withOpacity(0.8),
+                                  kBrandYellow.withOpacity(0.6),
+                                  kBrandYellow.withOpacity(0.4),
+                                  kBrandYellow.withOpacity(0.2),
+                                  kBrandYellow.withOpacity(0.1)
                                 ]),
                             borderRadius: BorderRadius.circular(10)),
                         child: Padding(
@@ -93,13 +93,13 @@ class GetStartedFirst extends StatelessWidget {
                                 style: GoogleFonts.livvic(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 12,
-                                    color: darkGrey),
+                                    color: kDarkGrey),
                               ),
                               vh10,
                               Image.asset(
                                 "assets/book12 1.png",
                                 colorBlendMode: BlendMode.color,
-                                color: brandYellow.withOpacity(0.1),
+                                color: kBrandYellow.withOpacity(0.1),
                                 fit: BoxFit.cover,
                               ),
                             ],
@@ -114,7 +114,7 @@ class GetStartedFirst extends StatelessWidget {
                     transition: Transition.rightToLeft,
                     curve: Curves.easeInOut,
                     duration: const Duration(milliseconds: 600));
-              }, 'Join Room', darkGrey, brandYellow)
+              }, 'Join Room', kDarkGrey, kBrandYellow)
             ],
           ),
         )),
