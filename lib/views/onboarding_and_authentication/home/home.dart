@@ -5,14 +5,15 @@ import 'package:flutter_image_stack/flutter_image_stack.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'home.dart';
+import '../../application/home_members.dart';
+
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List<ImageProvider> _img = [
+    List<ImageProvider> imgList = [
       const AssetImage('assets/book12 1.png'),
       const AssetImage(
         'assets/book12 1.png',
@@ -32,6 +33,44 @@ class Home extends StatelessWidget {
             return true;
           },
           child: Scaffold(
+            bottomNavigationBar: Container(
+              height: Get.height * 0.11,//80,
+              child: Column(
+                children: [
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <IconButton>[
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.local_library_rounded)),
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.stacked_bar_chart)),
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.more_horiz)),
+
+                    ],
+                  ),
+
+                  Expanded(
+                    child: Center(
+                      child: Expanded(flex: 1,
+                        child: Container(
+                          height: 5,
+                          width: Get.width*0.4,
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
+              decoration: const BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+              ),
+            ),
             backgroundColor: kScaffoldBg,
             body: CustomScrollView(
               scrollDirection: Axis.vertical,
@@ -106,26 +145,26 @@ class Home extends StatelessWidget {
                           Container(
                             height: 200,
                             width: Get.width,
-                            color: Color(0xff072031),
+                            color: const Color(0xff072031),
                             child: Center(
                                 child: Container(
                                   height: 140,
                                   width: Get.width * 0.7,
-                                  color: Color(0xff102d3f),
+                                  color: const Color(0xff102d3f),
                                   child: Center(
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Text('Daily Motivation',
                                             style: GoogleFonts.livvic(
-                                                color: Color(0xffb2dee5),
+                                                color: const Color(0xffb2dee5),
                                                 fontSize: 11,
                                                 fontWeight: FontWeight.w600)),
                                         vh20,
                                         Text(
                                           'Whoever fights and workd hard will surely reap the reward',
                                           style: GoogleFonts.livvic(
-                                              color: Color(0xffb2dee5),
+                                              color: const Color(0xffb2dee5),
                                               fontSize: 12,
                                               fontWeight: FontWeight.w600),
                                         ),
@@ -137,7 +176,7 @@ class Home extends StatelessWidget {
                           ),
                           vh20,
                           FlutterImageStack.providers(
-                            providers: _img,
+                            providers: imgList,
                             totalCount: 10,
                             itemRadius: 50,
                             itemCount: 10,
@@ -162,7 +201,7 @@ class Home extends StatelessWidget {
                                 style: GoogleFonts.livvic(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff85d36)),
+                                    color: const Color(0xfff85d36)),
                               ),
                             ],
                           ),
@@ -170,22 +209,22 @@ class Home extends StatelessWidget {
                           Text(
                             'My Activities',
                             style: GoogleFonts.livvic(
-                                color: Color(0xff202022),
+                                color: const Color(0xff202022),
                                 fontWeight: FontWeight.w500,
                                 fontSize: 14),
                           ),
                           ListTile(
-                            leading: CircleAvatar(),
+                            leading: const CircleAvatar(),
                             title: Text('Tasks Submitted',
                                 style: GoogleFonts.ibmPlexSans(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff2b1c1c))),
+                                    color: const Color(0xff2b1c1c))),
                             subtitle: Text('You have not submitted any task',
                                 style: GoogleFonts.ibmPlexSans(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                    color: Color(0xfff7c7c7c))),
+                                    color: const Color(0xff7c7c7c))),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -195,22 +234,22 @@ class Home extends StatelessWidget {
                                 style: GoogleFonts.livvic(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff86d36)),
+                                    color: const Color(0xfff86d36)),
                               ),
                             ],
                           ),
                           ListTile(
-                            leading: CircleAvatar(),
+                            leading: const CircleAvatar(),
                             title: Text('Readings',
                                 style: GoogleFonts.ibmPlexSans(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff2b1c1c))),
+                                    color: const Color(0xff2b1c1c))),
                             subtitle: Text('0/3 books completed',
                                 style: GoogleFonts.ibmPlexSans(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
-                                    color: Color(0xfff7c7c7c))),
+                                    color: const Color(0xff7c7c7c))),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -220,7 +259,7 @@ class Home extends StatelessWidget {
                                 style: GoogleFonts.livvic(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff86d36)),
+                                    color: const Color(0xfff86d36)),
                               ),
                             ],
                           ),
@@ -232,7 +271,7 @@ class Home extends StatelessWidget {
                               style: GoogleFonts.livvic(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xff2b1c1c)),
+                                  color: const Color(0xff2b1c1c)),
                             ),
                           ),
                           vh10,
@@ -244,19 +283,19 @@ class Home extends StatelessWidget {
                                 style: GoogleFonts.livvic(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xfff86d36)),
+                                    color: const Color(0xfff86d36)),
                               ),
                             ],
                           ),
                           vh30,
-                          // InkWell(
-                          //     onTap: () {
-                          //       Get.to(()=> const Home(),
-                          //           transition: Transition.rightToLeft,
-                          //           curve: Curves.easeInOut,
-                          //           duration: const Duration(milliseconds: 600));
-                          //     },
-                          //     child: Icon(Icons.arrow_forward)),
+                          InkWell(
+                              onTap: () {
+                                Get.to(()=> const HomeMembers(),
+                                    transition: Transition.rightToLeft,
+                                    curve: Curves.easeInOut,
+                                    duration: const Duration(milliseconds: 600));
+                              },
+                              child: const Icon(Icons.arrow_forward)),
                           vh50
 
                           // ListView.builder(

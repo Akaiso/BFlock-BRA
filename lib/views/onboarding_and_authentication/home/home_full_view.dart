@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_stack/flutter_image_stack.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'home.dart';
 
 class HomeFullView extends StatelessWidget {
@@ -14,9 +13,7 @@ class HomeFullView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ImageProvider> _img = [
       const AssetImage('assets/book12 1.png'),
-      const AssetImage(
-        'assets/book12 1.png',
-      ),
+      const AssetImage('assets/book12 1.png'),
       const ExactAssetImage('assets/book12 1.png'),
       const ExactAssetImage('assets/book12 1.png'),
       const ExactAssetImage('assets/book12 1.png'),
@@ -106,26 +103,26 @@ class HomeFullView extends StatelessWidget {
                       Container(
                         height: 200,
                         width: Get.width,
-                        color: Color(0xff072031),
+                        color: const Color(0xff072031),
                         child: Center(
                             child: Container(
                           height: 140,
                           width: Get.width * 0.7,
-                          color: Color(0xff102d3f),
+                          color: const Color(0xff102d3f),
                           child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text('Daily Motivation',
                                     style: GoogleFonts.livvic(
-                                        color: Color(0xffb2dee5),
+                                        color: const Color(0xffb2dee5),
                                         fontSize: 11,
                                         fontWeight: FontWeight.w600)),
                                 vh20,
                                 Text(
                                   'Whoever fights and workd hard will surely reap the reward',
                                   style: GoogleFonts.livvic(
-                                      color: Color(0xffb2dee5),
+                                      color: const Color(0xffb2dee5),
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600),
                                 ),
@@ -162,7 +159,7 @@ class HomeFullView extends StatelessWidget {
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff85d36)),
+                                color: const Color(0xfff85d36)),
                           ),
                         ],
                       ),
@@ -170,22 +167,22 @@ class HomeFullView extends StatelessWidget {
                       Text(
                         'My Activities',
                         style: GoogleFonts.livvic(
-                            color: Color(0xff202022),
+                            color: const Color(0xff202022),
                             fontWeight: FontWeight.w500,
                             fontSize: 14),
                       ),
                       ListTile(
-                        leading: CircleAvatar(),
+                        leading: const CircleAvatar(),
                         title: Text('Tasks Submitted',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff2b1c1c))),
+                                color: const Color(0xff2b1c1c))),
                         subtitle: Text('You have not submitted any task',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xfff7c7c7c))),
+                                color: const Color(0xff7c7c7c))),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -195,22 +192,22 @@ class HomeFullView extends StatelessWidget {
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff86d36)),
+                                color: const Color(0xfff86d36)),
                           ),
                         ],
                       ),
                       ListTile(
-                        leading: CircleAvatar(),
+                        leading: const CircleAvatar(),
                         title: Text('Readings',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff2b1c1c))),
+                                color: const Color(0xff2b1c1c))),
                         subtitle: Text('0/3 books completed',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xfff7c7c7c))),
+                                color: const Color(0xff7c7c7c))),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -220,7 +217,7 @@ class HomeFullView extends StatelessWidget {
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff86d36)),
+                                color: const Color(0xfff86d36)),
                           ),
                         ],
                       ),
@@ -232,7 +229,7 @@ class HomeFullView extends StatelessWidget {
                           style: GoogleFonts.livvic(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xff2b1c1c)),
+                              color: const Color(0xff2b1c1c)),
                         ),
                       ),
                       vh10,
@@ -244,7 +241,7 @@ class HomeFullView extends StatelessWidget {
                             style: GoogleFonts.livvic(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xfff86d36)),
+                                color: const Color(0xfff86d36)),
                           ),
                         ],
                       ),
@@ -256,7 +253,7 @@ class HomeFullView extends StatelessWidget {
                                 curve: Curves.easeInOut,
                                 duration: const Duration(milliseconds: 600));
                           },
-                          child: Icon(Icons.arrow_forward)),
+                          child: const Icon(Icons.arrow_forward)),
                       vh50
 
                       // ListView.builder(
