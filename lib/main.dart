@@ -1,3 +1,4 @@
+import 'package:bra/views/onboarding_and_authentication/home/home_full_view.dart';
 import 'package:bra/views/onboarding_and_authentication/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     WidgetsFlutterBinding.ensureInitialized();
     return const GetMaterialApp(
       title: "Billionaire flock -a book review app",
-      home: SplashScreen(),
+      home: HomeFullView(),  //SplashScreen()
     );
   }
 }

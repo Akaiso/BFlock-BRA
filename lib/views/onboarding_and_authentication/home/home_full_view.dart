@@ -1,9 +1,12 @@
+import 'package:badges/badges.dart';
 import 'package:bra/components/colors.dart';
 import 'package:bra/components/sized_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_stack/flutter_image_stack.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'home.dart';
 
 class HomeFullView extends StatelessWidget {
@@ -11,17 +14,62 @@ class HomeFullView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ImageProvider> _img = [
-      const AssetImage('assets/book12 1.png'),
-      const AssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
-      const ExactAssetImage('assets/book12 1.png'),
+    List<Widget> _img = [
+      // const AssetImage('assets/_Group_.png'),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      Badge(
+        badgeColor: Color(0xff42D893),
+        position: BadgePosition.topEnd(top: -4, end: 9),
+        child: Container(),
+      ),
+      // const AssetImage('assets/book12 1.png'),
+      // const ExactAssetImage('assets/googlelogo.png'),
+      // const ExactAssetImage('assets/book12 1.png'),
+      // const ExactAssetImage('assets/_Group_.png'),
+      // const ExactAssetImage('assets/book12 1.png'),
+      // const ExactAssetImage('assets/googlelogo.png'),
+      // const ExactAssetImage('assets/googlelogo.png'),
+      // const ExactAssetImage('assets/_Group_.png'),
+      // const ExactAssetImage('assets/googlelogo.png'),
     ];
     return SafeArea(
         child: WillPopScope(
@@ -66,6 +114,7 @@ class HomeFullView extends StatelessWidget {
                           ],
                         ),
                         CircleAvatar(
+                          backgroundColor: Colors.grey,
                           child: Image.asset(
                             "assets/bf_logo_2.png",
                             fit: BoxFit.cover,
@@ -92,11 +141,13 @@ class HomeFullView extends StatelessWidget {
                                 fontSize: 18,
                                 color: kDarkGrey),
                           ),
-                          const Icon(
-                            Icons.notifications_none_outlined,
-                            color: Colors.black,
-                            size: 35,
-                          )
+                          Badge(
+                            position: BadgePosition.topEnd(top: 5, end: 5),
+                            child: const Icon(
+                              Icons.notifications_none_outlined,
+                              size: 35,
+                            ),
+                          ),
                         ],
                       ),
                       vh20,
@@ -108,39 +159,81 @@ class HomeFullView extends StatelessWidget {
                             child: Container(
                           height: 140,
                           width: Get.width * 0.7,
-                          color: const Color(0xff102d3f),
+                          color: Colors.transparent, //const Color(0xff102d3f),
                           child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Stack(
                               children: [
-                                Text('Daily Motivation',
-                                    style: GoogleFonts.livvic(
-                                        color: const Color(0xffb2dee5),
-                                        fontSize: 11,
-                                        fontWeight: FontWeight.w600)),
-                                vh20,
-                                Text(
-                                  'Whoever fights and workd hard will surely reap the reward',
-                                  style: GoogleFonts.livvic(
-                                      color: const Color(0xffb2dee5),
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w600),
+                                Container(
+                                  height: 140,
+                                  width: Get.width * 0.7,
+                                  child: Image.asset('assets/Group 8158.png'),
                                 ),
-                                vh20,
+
+                                // Positioned(child: child)
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 38.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('Daily Motivation',
+                                          style: GoogleFonts.livvic(
+                                              color: const Color(0xffb2dee5),
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w600)),
+                                      vh10,
+                                      Text(
+                                        'Whoever fights and workd hard will surely reap the reward',
+                                        style: GoogleFonts.livvic(
+                                            color: const Color(0xffb2dee5),
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      // vh20,
+                                      SizedBox(
+                                        width: Get.width,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              'Daniel James',
+                                              style: GoogleFonts.livvic(
+                                                  color:
+                                                      const Color(0xffb2dee5),
+                                                  fontSize: 9,
+                                                  fontWeight: FontWeight.w500),
+                                            ),
+                                            Text('Billionaire Flock',
+                                                style: GoogleFonts.livvic(
+                                                    color:
+                                                        const Color(0xffb2dee5),
+                                                    fontSize: 7,
+                                                    fontWeight:
+                                                        FontWeight.w300))
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ),
                         )),
                       ),
                       vh20,
-                      FlutterImageStack.providers(
-                        providers: _img,
-                        totalCount: 10,
+                      FlutterImageStack.widgets(
+                        // providers: _img,
+                        children: _img,
+                        totalCount: 9,
                         itemRadius: 50,
                         itemCount: 10,
                         showTotalCount: true,
-                        itemBorderColor: Colors.black,
-                        itemBorderWidth: 1,
+                        itemBorderColor: Color(0xffF86D36),
+                        itemBorderWidth: 3.0,
+                        backgroundColor: Color(0xffE7E5F0),
                       ),
                       vh10,
                       Text(
@@ -172,7 +265,16 @@ class HomeFullView extends StatelessWidget {
                             fontSize: 14),
                       ),
                       ListTile(
-                        leading: const CircleAvatar(),
+                        leading: CircularPercentIndicator(
+                          radius: 25,
+                          center: Text(
+                            '0%',
+                            style: GoogleFonts.livvic(
+                                color: Color(0xff979797),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
                         title: Text('Tasks Submitted',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 14,
@@ -197,7 +299,16 @@ class HomeFullView extends StatelessWidget {
                         ],
                       ),
                       ListTile(
-                        leading: const CircleAvatar(),
+                        leading: CircularPercentIndicator(
+                          radius: 25,
+                          center: Text(
+                            '0%',
+                            style: GoogleFonts.livvic(
+                                color: Color(0xff979797),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
                         title: Text('Readings',
                             style: GoogleFonts.ibmPlexSans(
                                 fontSize: 14,
@@ -248,7 +359,7 @@ class HomeFullView extends StatelessWidget {
                       vh30,
                       InkWell(
                           onTap: () {
-                            Get.to(()=> const Home(),
+                            Get.to(() => const Home(),
                                 transition: Transition.rightToLeft,
                                 curve: Curves.easeInOut,
                                 duration: const Duration(milliseconds: 600));
