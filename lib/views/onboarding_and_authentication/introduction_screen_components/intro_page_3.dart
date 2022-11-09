@@ -32,7 +32,7 @@ introPage3(){
           width: 290,
           child: Text(
             'Help you carry an almost unlimited amount of books',
-            style: GoogleFonts.livvic(fontSize: 18, color: grey1),
+            style: GoogleFonts.livvic(fontSize: 18, color: kGrey1),
             textAlign: TextAlign.center,
           )),
     ],

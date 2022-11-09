@@ -33,7 +33,7 @@ introPage1(){
           width: 290 ,
           child: Text(
             'Read everyday. The benefits are well charted',softWrap: true,
-            style: GoogleFonts.livvic(fontSize: 18, color: grey1),
+            style: GoogleFonts.livvic(fontSize: 18, color: kGrey1),
             textAlign: TextAlign.center,
           )),
     ],
