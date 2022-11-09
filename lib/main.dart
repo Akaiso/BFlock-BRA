@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     WidgetsFlutterBinding.ensureInitialized();
     return const GetMaterialApp(
       title: "Billionaire flock -a book review app",
-      home: HomeFullView(),  //SplashScreen()
+      home:    SplashScreen(),  // HomeFullView(),
     );
   }
 }
